@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+/* HEADER */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #1F2937;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 150px;
+}
+
+ul {
+    display: flex;
+    color: #E5E7EB;
+    font-size: 18px;
+    gap: 15px;
+    list-style: none;
+}
+
+.logo {
+    width: 170px;
+    left: 15px;
+    background-size: contain;
+    color: #f9faf8;
+    font-size: 24px;
+    
+}
+.header-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+/* HERO SECTION */
+.hero-all {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    background-color: #1F2937;
+    padding-bottom: 150px;
+    align-items: center;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    flex-wrap: wrap;
+    
+    background-color: #1f2937;
+}
+.hero-right
+{
+    display: flex;
+    
+    
+}
+
+.main-text {
+    color: #f9faf8;
+    font-size: 48px;
+    font-weight: bolder;
+}
+.secondary-text {
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+.hero-btn {
+   background-color: #3882F6;
+   padding: 15px 32px;
+   color: white;
+   border: none;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   border-radius: 5%;
+   margin: 20px;
+   max-width: 250px;
+}
+
+/* Second Section - Information Section */
+.second-section {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 30px;
+}
+
+.information-text {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+    text-align: center;
+    margin: 30px;
+    
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-text {
+    max-width: 150px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Third Section - Reviews/Quotes */
+.third-section {
+    display: flex;
+    background-color: #E5E7EB;
+   
+    flex-direction: column;
+    padding: 15rem;
+}
+
+.quote {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 36px;
+    color: #1F2937;
+    text-align: justify;
+    max-width: 75%;  
+}
+.quote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signature {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+    padding-right: 255px;
+    font-weight: 900;
+}
+
+/* Final Section - Call to Action */
+
+.final-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #3882F6;
+    margin: 90px;
+    padding: 30px;
+    height: auto;
+    border-radius: 15px 15px 15px 15px;
+    justify-content: center;
+
+}
+.cta-text {
+    color: white;
+    
+}
+
+.final-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: column;
+}
+.last-cta-btn {
+    padding: 15px 32px;
+    color: white;
+    border: solid;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 15px 15px 15px 15x;
+    border-color: white;
+    background-color: #3882F6;
+    max-width: 250px;  
+}
