@@ -11,6 +11,11 @@ body {
     flex-direction: column;
 }
 /* HEADER */
+.sticky-logo {
+    height: 160px;
+    width: 160px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -160,26 +165,29 @@ ul {
 
 .final-section {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
+    align-content: center;
+    justify-content: center;
     background-color: #3882F6;
-    margin: 90px;
+    margin-left: 827px;
+    margin-top: 67px;
+    margin-bottom: 67px;
     padding: 30px;
     height: auto;
+    max-width: 940px;
     border-radius: 15px 15px 15px 15px;
-    justify-content: center;
-
 }
 .cta-text {
-    color: white;
+    color: white;  
     
 }
 
 .final-btn {
     display: flex;
     justify-content: flex-end;
-    align-content: flex-end;
-    flex-direction: column;
+    align-content: center;
 }
+
 .last-cta-btn {
     padding: 15px 32px;
     color: white;
@@ -190,4 +198,46 @@ ul {
     border-color: white;
     background-color: #3882F6;
     max-width: 250px;  
+    margin-left: 85px;
+}
+
+/* Button Effect */
+button {
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*FOOTER */
+.footer {
+    background-color: #1F2937;
+    color: white;
+    padding: 30px;
+    text-align: center;
 }
