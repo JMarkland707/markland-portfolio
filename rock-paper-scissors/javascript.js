@@ -15,27 +15,45 @@ const gameChoices = ["rock", "paper", "scissors"];
 /* When a function (getComputerChoice) is called the computer will randomly return one of three values 
 (rock, paper, scissors)*/
 // Get computer Choice
+const computerSelection = gameChoices[Math.floor(Math.random() * gameChoices.length)];
 function getComputerChoice() {
-    const randomChoice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
-   // maybe needs to move into playround function
-    console.log("Computer selects " + randomChoice);
+    console.log("Computer selects " + computerSelection);
 }
 
 // Get player input
+const playerSelection = prompt("Choose Rock, Paper or Scissors");
+
 function getPlayerChoice() {
-    let playerSelection = prompt("Choose Rock, Paper or Scissors");
-// prompt input will be stored in playerSelection, this needs to be converted to lowercase and then use this to compare against comp choice
-  console.log("You picked " + playerSelection.toLowerCase());
+    if (playerSelection === 'rock' || playerSelection ==='paper' || playerSelection === 'scissors') {
+    console.log("You picked " + playerSelection.toLowerCase());
+    } else {
+        console.log('Invalid input');
+    }
+
 }
+// Create a score keeper
+let playerScore = 0;
+let computerScore = 0;
 
-
-//Combine playerchoice and computer choice into rounds.  Call this function playRound
+// Create a function to simulate a round
 
 function playRound(){
     console.log("Rock, Paper, Scissors..BOOM!");
     getPlayerChoice();
     getComputerChoice();
-// Create outcomes of matches here
-
+    let win = {
+        rock: "scissors",
+        scissors: "paper",
+        paper: "rock"
+    }
+    if (win[playerSelection] === computerSelection) {
+        console.log(`You Win!! ${playerSelection} beats ${computerSelection}`);
+    } else if (win[computerSelection] === playerSelection) {
+        console.log(`You lose.  ${computerSelection} beats ${playerSelection}`);
+    } else if (win[computerSelection] === win[playerSelection]) {
+        console.log(`Tie game!  Try Again.`);
+    }
 }
+
+
 playRound();
