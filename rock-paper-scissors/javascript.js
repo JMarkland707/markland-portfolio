@@ -31,13 +31,16 @@ function getPlayerChoice() {
     }
 
 }
-// Create a score keeper
-let playerScore = 0;
-let computerScore = 0;
+/* if win = playerselection then increase playerscore by 1.  if win = computerselection then increase computer score by 1
+when playerscore or computerscore reaches 5 announce, game Over!  blank is the winner */
+
+
 
 // Create a function to simulate a round
 
 function playRound(){
+    let playerScore = 0;
+    let computerScore = 0;
     console.log("Rock, Paper, Scissors..BOOM!");
     getPlayerChoice();
     getComputerChoice();
@@ -47,13 +50,26 @@ function playRound(){
         paper: "rock"
     }
     if (win[playerSelection] === computerSelection) {
-        console.log(`You Win!! ${playerSelection} beats ${computerSelection}`);
+        console.log(`You Win!! ${playerSelection} beats ${computerSelection}`)
+        playerScore++;
     } else if (win[computerSelection] === playerSelection) {
-        console.log(`You lose.  ${computerSelection} beats ${playerSelection}`);
+        console.log(`You lose.  ${computerSelection} beats ${playerSelection}`)
+        computerScore++;
     } else if (win[computerSelection] === win[playerSelection]) {
         console.log(`Tie game!  Try Again.`);
     }
+    for (let i = 1; playerScore < 6 && computerScore < 6; i++) {
+        if (playerScore === 5 || computerScore === 5) {
+            console.log("Game over, you have 5 points");
+        } else if (win === playerScore++ || win === computerScore++) {
+            console.log("Player has: " ${playerScore} " and Computer has: " ${computerScore});
+        }
+    
+    }
+
+
 }
+
 
 
 playRound();
